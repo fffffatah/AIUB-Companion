@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.ViewManagement;
+using Windows.UI;
+using Windows.ApplicationModel.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +28,15 @@ namespace AIUB_Companion
         public MainPage()
         {
             this.InitializeComponent();
+            AcrylicTitleBar();
+        }
+        public void AcrylicTitleBar()
+        {
+            CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+            var title = ApplicationView.GetForCurrentView();
+            title.TitleBar.ButtonBackgroundColor = Colors.Transparent;
+            title.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+            title.TitleBar.ButtonForegroundColor = (Color)Resources["SystemBaseHighColor"];
         }
     }
 }

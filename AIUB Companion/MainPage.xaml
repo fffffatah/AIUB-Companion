@@ -6,9 +6,20 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid>
-
-    </Grid>
+    Background="#FF1F1F1F"
+    RequestedTheme="Dark" >
+    <NavigationView x:Name="MainTopNaviagtion" PaneDisplayMode="Top">
+        <Grid x:Name="NavGrid" Margin="0,-39,0,0">
+            <ListView Height="1020" Width="1490">
+                <Image x:Name="img1" Height="752" Width="668" Source="/Assets/Samsung Galaxy Note 10+ Star Wars Wallpaper 2 YTECHB.png"/>
+                <Image x:Name="img2" Height="752" Width="668" Source="/Assets/Samsung Galaxy Note 10+ Star Wars Wallpaper 4 YTECHB.png"/>
+            </ListView>
+        </Grid>
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Home" x:Name="Home"/>
+            <NavigationViewItem Content="Notice" x:Name="Notice"/>
+            <NavigationViewItem Content="News" x:Name="News"/>
+            <NavigationViewItem Content="Portal" x:Name="Portal"/>
+        </NavigationView.MenuItems>
+    </NavigationView>
 </Page>

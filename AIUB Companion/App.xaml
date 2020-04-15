@@ -1,0 +1,7 @@
+﻿<Application
+    x:Class="AIUB_Companion.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AIUB_Companion">
+
+</Application>

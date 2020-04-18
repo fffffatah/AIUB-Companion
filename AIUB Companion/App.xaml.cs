@@ -14,7 +14,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
 namespace AIUB_Companion
 {
     /// <summary>
@@ -96,5 +95,6 @@ namespace AIUB_Companion
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
     }
 }

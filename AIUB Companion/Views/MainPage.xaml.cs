@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.UI.ViewManagement;
 using Windows.UI;
 using Windows.ApplicationModel.Core;
+using AIUB_Companion.Views;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -30,13 +31,23 @@ namespace AIUB_Companion
             this.InitializeComponent();
             AcrylicTitleBar();
         }
-        public void AcrylicTitleBar()
+        void AcrylicTitleBar()
         {
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
             var title = ApplicationView.GetForCurrentView();
             title.TitleBar.ButtonBackgroundColor = Colors.Transparent;
             title.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
             title.TitleBar.ButtonForegroundColor = (Color)Resources["SystemBaseHighColor"];
+        }
+
+        private void _onTapHome(object sender, TappedRoutedEventArgs e)
+        {
+            PageFrame.Navigate(typeof(HomePage));
+        }
+
+        private void _onTapNotice(object sender, TappedRoutedEventArgs e)
+        {
+            PageFrame.Navigate(typeof(NoticePage));
         }
     }
 }
